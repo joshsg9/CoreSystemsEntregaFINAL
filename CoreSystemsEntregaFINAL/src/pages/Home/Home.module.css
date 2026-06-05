@@ -1,0 +1,258 @@
+/* src/pages/Home/Home.module.css */
+
+.page {
+  min-height: 100vh;
+  background: #f0f2f5;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #1a0a3d 0%, #2d1b6b 40%, #1a3a6b 100%);
+  padding: 72px 32px 48px;
+  text-align: center;
+  position: relative;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+.heroTitle {
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: 900;
+  color: #fff;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.heroSubtitle {
+  font-size: clamp(16px, 2.5vw, 22px);
+  font-weight: 600;
+  color: #d0e0ff;
+  margin: 0 0 32px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #3ecfcf;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.ctaPrimary:hover {
+  background: #2db8b8;
+  transform: translateY(-1px);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.ctaSecondary:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.08);
+}
+
+.heroDots {
+  display: flex;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: background 0.2s;
+}
+
+.dotActive {
+  background: #fff;
+}
+
+/* ── Features ── */
+.features {
+  padding: 40px 32px 20px;
+}
+
+.featuresTitle {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2d45;
+  margin: 0 0 24px;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.featureCard {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.featureCard:hover {
+  box-shadow: 0 8px 24px rgba(108,78,203,0.1);
+  transform: translateY(-3px);
+}
+
+.featureCardTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a2d45;
+  margin: 0 0 16px;
+}
+
+.featureCardIcon {
+  color: #6c4ecb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.featureCardDesc {
+  font-size: 12.5px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Sale Section ── */
+.saleSection {
+  padding: 20px 32px 40px;
+}
+
+.saleSectionInner {
+  background: #fff;
+  border-radius: 20px;
+  padding: 28px 28px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+}
+
+.saleTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a2d45;
+  margin: 0 0 20px;
+}
+
+.saleScrollWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.saleScroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #e0e0e0 transparent;
+}
+
+.saleScroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.saleScroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.saleScroll::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 4px;
+}
+
+.scrollBtn {
+  position: absolute;
+  right: -16px;
+  width: 44px;
+  height: 44px;
+  background: #3ecfcf;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(62,207,207,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.scrollBtn:hover {
+  background: #2db8b8;
+  transform: scale(1.07);
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .featureGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .features,
+  .saleSection {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero {
+    padding: 48px 16px 36px;
+  }
+}
+

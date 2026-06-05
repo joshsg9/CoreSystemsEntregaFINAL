@@ -1,0 +1,89 @@
+/* src/components/CategoryDropdown/CategoryDropdown.module.css */
+
+.dropdown {
+  display: flex;
+  gap: 0;
+  background: #e8eaf6;         /* light lavender panel like the reference */
+  border-top: 3px solid #3ecfcf;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  padding: 28px 40px 32px;
+  width: 100%;                  /* fills the full dropdownWrapper */
+  animation: slideDown 0.18s cubic-bezier(0.16,1,0.3,1);
+  box-sizing: border-box;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Three equal columns */
+.column {
+  flex: 1;
+  padding: 0 32px 0 0;
+}
+.column:last-child { padding-right: 0; }
+.column + .column {
+  padding-left: 32px;
+  border-left: 1px solid rgba(108,78,203,0.15);
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.columnIcon { font-size: 16px; }
+
+.columnTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.divider {
+  height: 2px;
+  background: #6c4ecb;
+  margin-bottom: 16px;
+  border-radius: 2px;
+}
+
+.filterGroup {
+  margin-bottom: 14px;
+}
+
+.filterLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6c4ecb;
+  margin: 0 0 5px;
+}
+
+.filterItems {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.filterItem {
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.filterItem:hover { color: #6c4ecb; text-decoration: underline; }
+
+.separator { color: #aaa; user-select: none; }
+
+.accItem {
+  display: block;
+  font-size: 13px;
+  color: #444;
+  margin: 3px 0;
+  cursor: pointer;
+  transition: color 0.15s;
+  text-decoration: none;
+}
+.accItem:hover { color: #6c4ecb; }
